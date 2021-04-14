@@ -93,7 +93,7 @@
             </div>
     </section>
     <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-        <a class="text-indigo-500">example@email.com</a>
+        <a id = "date" class="text-indigo-500">example@email.com</a>
         <p class="leading-normal my-5">221b Backer st.
             <br>Marylebone, London NW1 6XE, United Kingdom.
         </p>
@@ -140,8 +140,9 @@ var myfunc = setInterval(function(){
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  console.log(days+"d "+hours+"h "+minutes+"m "+seconds+"s ");
-   document.write(days+"d "+hours+"h "+minutes+"m "+seconds+"s ")
+  
+   document.getElementbyId('date').innertext = days+"d "+hours+"h "+minutes+"m "+seconds+"s "
+   //document.write(days+"d "+hours+"h "+minutes+"m "+seconds+"s ")
   }, 1000)
 
  
